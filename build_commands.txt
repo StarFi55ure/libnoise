@@ -1,2 +1,0 @@
-em++ -O2 libnoise_glue.cpp -L/home/julian/projects/libnoise/build/src -lnoise --post-js glue.js -s DEMANGLE_SUPPORT=1 -o libnoise.html
-python ~/apps/emsdk/emscripten/master/tools/webidl_binder.py libnoise.idl glue
