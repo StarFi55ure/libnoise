@@ -1,0 +1,6 @@
+
+[Prefix="noise::module::"]
+interface Perlin {
+    void Perlin();
+    double GetValue(double x, double y, double z);
+};
