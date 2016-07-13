@@ -3,11 +3,6 @@
 libnoise
 ========
 
-This is a fork of libnoise which includes noiseutils in the building and installing process.
-It also contains FindLibNoise.cmake
-
-> This is a fork of libnoise which changes the build system from static Makefiles to cmake.
-
 A portable, open-source, coherent noise-generating library for C++
 
 libnoise is a portable C++ library that is used to generate coherent noise, a type of smoothly-changing noise.
@@ -24,49 +19,6 @@ of other noise modules in various ways; you can join these modules together to g
 Compiling
 ---------
 
-cmake supports 'out of source' builds by default, to use it do this:
-
-```shell
-mkdir build
-cd build
-cmake ..
-make
+```bash
+> EM_PATH=<path to Emscripten SDK> ./build_glue_code.sh
 ```
-
-this should create everything into the `build/` directory
-
-Installing
-----------
-
-this is covered by cmake:
-
-```shell
-make install
-```
-
-Usage
------
-
-see examples for details but in general:
-
- 1. you need to supply the library `-lnoise` to the linker
- 2. the includes to the compile with `-I /usr/include/noise`
-
-OR
-
-Use provided FindLibNoise.cmake
-
-A comment on performance
-------------------------
-
-Using compiler optimizations for libnoise is *strongly recommended*.  Using the
-unoptimized library is roughly a fifth as fast as using -O3 on my test
-computer.
-
-this cmake build by default (if not in developer mode) will build with `-O3`
-
-
-see:
-CMAKE_BUILD_TYPE
-
-Type of build (Debug, Release, ...)
