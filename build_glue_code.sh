@@ -17,7 +17,7 @@ python $EMSCRIPTEN/tools/webidl_binder.py libnoise.idl glue
 
 cat glue.js export_module.js > postfix.js
 
-em++ --memory-init-file 0 libnoise_glue.cpp -Lbuild/src -lnoise --post-js postfix.js -s DEMANGLE_SUPPORT=1 -o build/libnoise.js
+em++ -O2 --memory-init-file 0 libnoise_glue.cpp -Lbuild/src -lnoise --post-js postfix.js -s DEMANGLE_SUPPORT=1 -o build/libnoise.js
 
 # create npm package
 cd $PWD
