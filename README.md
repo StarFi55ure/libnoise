@@ -20,5 +20,5 @@ Compiling
 ---------
 
 ```bash
-> EM_PATH=<path to Emscripten SDK> ./build_glue_code.sh
+$> EM_PATH=/path/to/Emscripten/SDK ./build_glue_code.sh
 ```
