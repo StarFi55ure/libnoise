@@ -1,0 +1,27 @@
+{
+  "name": "libnoise.js",
+  "version": "0.0.1",
+  "description": "Emscripten build of libnoise C++ library",
+  "main": "libnoise.js",
+  "directories": {
+    "doc": "doc",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jupake/libnoise.git"
+  },
+  "keywords": [
+    "noise",
+    "perlin"
+  ],
+  "author": "Julian Kennedy <juliankenn@gmail.com>",
+  "license": "LGPL-2.1",
+  "bugs": {
+    "url": "https://github.com/jupake/libnoise/issues"
+  },
+  "homepage": "https://github.com/jupake/libnoise#readme"
+}
