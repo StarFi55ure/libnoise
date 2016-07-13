@@ -1,6 +1,6 @@
 {
   "name": "libnoise.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Emscripten build of libnoise C++ library",
   "main": "libnoise.js",
   "directories": {
