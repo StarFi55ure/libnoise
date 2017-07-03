@@ -29,3 +29,5 @@ glue.js
 parser.out
 
 postfix.js
+.idea
+*.swp
