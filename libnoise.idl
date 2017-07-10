@@ -1,6 +1,74 @@
 
+/* Enums */
+enum noise_NoiseQuality {
+    "noise::QUALITY_FAST",
+    "noise::QUALITY_STD",
+    "noise::QUALITY_BEST"
+};
+
+
+/* Modules */
+[Prefix="noise::module::"]
+interface Module {
+    //void Module(long sourceModuleCount);
+
+    [Const, Ref] Module GetSourceModule(long index);
+    long GetSourceModuleCount();
+    double GetValue(double x, double y, double z);
+    void SetSourceModule(long index, [Ref] Module sourceModule);
+};
+
+[Prefix="noise::module::"]
+interface Const {
+    void Const();
+
+    double GetConstValue();
+    long GetSourceModuleCount();
+    double GetValue(double x, double y, double z);
+    void SetConstValue(double constValue);
+};
+Const implements Module;
+
+[Prefix="noise::module::"]
+interface Multiply {
+    void Multiply();
+
+    long GetSourceModuleCount();
+    double GetValue(double x, double y, double z);
+};
+Multiply implements Module;
+
 [Prefix="noise::module::"]
 interface Perlin {
     void Perlin();
+
+    double GetFrequency();
+    double GetLacunarity();
+    noise_NoiseQuality GetNoiseQuality();
+    long GetOctaveCount();
+    double GetPersistence();
+    long GetSeed();
+    long GetSourceModuleCount();
     double GetValue(double x, double y, double z);
+
+    void SetFrequency(double frequency);
+    void SetLacunarity(double lacunarity);
+    void SetNoiseQuality(noise_NoiseQuality noiseQuality);
+    void SetOctaveCount(long octaveCount);
+    void SetPersistence(double persistence);
+    void SetSeed(long seed);
 };
+
+Perlin implements Module;
+
+
+/* Models */
+[Prefix="noise::model::"]
+interface Plane {
+    void Plane();
+
+    [Const, Ref] Module GetModule();
+    double GetValue(double x, double z);
+    void SetModule([Const, Ref] Module inModule);
+};
+

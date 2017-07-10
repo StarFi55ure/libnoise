@@ -13,6 +13,7 @@ emmake make
 cd $root_dir
 
 # run build commands
+rm -f glue.cpp glue.js
 python $EMSCRIPTEN/tools/webidl_binder.py libnoise.idl glue
 
 #cat glue.js export_module.js > postfix.js
