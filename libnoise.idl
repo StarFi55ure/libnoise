@@ -6,7 +6,6 @@ enum noise_NoiseQuality {
     "noise::QUALITY_BEST"
 };
 
-
 /* Modules */
 [Prefix="noise::module::"]
 interface Module {
@@ -18,6 +17,16 @@ interface Module {
     void SetSourceModule(long index, [Ref] Module sourceModule);
 };
 
+// todo: ControlPoint (Struct)
+// TODO: Abs
+// TODO: Add
+// todo: Billow
+// todo: Blend
+// todo: cache
+// todo: checkerboard
+// todo: clamp
+// todo:
+
 [Prefix="noise::module::"]
 interface Const {
     void Const();
@@ -28,6 +37,14 @@ interface Const {
     void SetConstValue(double constValue);
 };
 Const implements Module;
+
+// todo: Curve
+// todo: cylinders
+// todo: displace
+// todo: exponent
+// todo: invert
+// todo: max
+// todo: min
 
 [Prefix="noise::module::"]
 interface Multiply {
@@ -58,9 +75,19 @@ interface Perlin {
     void SetPersistence(double persistence);
     void SetSeed(long seed);
 };
-
 Perlin implements Module;
 
+// todo: Power
+// todo: RidgedMulti
+// todo: RotatePoint
+// todo: ScaleBias
+// todo: ScalePoint
+// todo: Select
+// todo: spheres
+// todo: terrace
+// todo: TranslatePoint
+// todo: turbulence
+// todo: voronoi
 
 /* Models */
 [Prefix="noise::model::"]
@@ -72,3 +99,6 @@ interface Plane {
     void SetModule([Const, Ref] Module inModule);
 };
 
+// todo: model::Sphere
+// todo: model::Line
+// todo: model::Cylinder
