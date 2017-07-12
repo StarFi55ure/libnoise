@@ -20,12 +20,33 @@ interface Module {
 // todo: ControlPoint (Struct)
 // TODO: Abs
 // TODO: Add
-// todo: Billow
+
+[Prefix="noise::module::"]
+interface Billow {
+    void Billow();
+
+    double GetFrequency();
+    double GetLacunarity();
+    noise_NoiseQuality GetNoiseQuality();
+    long GetOctaveCount();
+    double GetPersistence();
+    long GetSeed();
+    long GetSourceModuleCount();
+    double GetValue(double x, double y, double z);
+
+    void SetFrequency(double frequency);
+    void SetLacunarity(double lacunarity);
+    void SetNoiseQuality(noise_NoiseQuality noiseQuality);
+    void SetOctaveCount(long octaveCount);
+    void SetPersistence(double persistence);
+    void SetSeed(long seed);
+};
+Billow implements Module;
+
 // todo: Blend
 // todo: cache
 // todo: checkerboard
 // todo: clamp
-// todo:
 
 [Prefix="noise::module::"]
 interface Const {
