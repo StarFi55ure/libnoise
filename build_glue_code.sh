@@ -1,5 +1,15 @@
 #!/bin/bash
 
+if [ -f .local ]; then
+    echo "Found local settings: .local"
+    source .local
+fi
+
+if [ -z $EM_PATH ]; then
+    echo "Set EM_PATH variable...";
+    exit 1;
+fi
+
 source $EM_PATH/emsdk_env.sh
 
 root_dir=$PWD
