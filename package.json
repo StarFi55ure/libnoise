@@ -1,8 +1,9 @@
 {
   "name": "libnoise.js",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Emscripten build of libnoise C++ library",
   "main": "libnoise.js",
+  "types": "libnoise.js.d.ts",
   "directories": {
     "doc": "doc",
     "example": "examples"
@@ -12,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jupake/libnoise.git"
+    "url": "git+https://github.com/StarFi55ure/libnoise.git"
   },
   "keywords": [
     "noise",
@@ -21,7 +22,7 @@
   "author": "Julian Kennedy <juliankenn@gmail.com>",
   "license": "LGPL-2.1",
   "bugs": {
-    "url": "https://github.com/jupake/libnoise/issues"
+    "url": "https://github.com/StarFi55ure/libnoise/issues"
   },
-  "homepage": "https://github.com/jupake/libnoise#readme"
+  "homepage": "https://github.com/StarFi55ure/libnoise#readme"
 }
